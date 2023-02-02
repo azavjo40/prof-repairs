@@ -1,0 +1,47 @@
+<app-layout>
+  <div class="w-full flex flex-col items-center bg-[rgb(67, 191, 168)]">
+    <div class="relative">
+      <app-swiper-example
+        [isNavigation]="true"
+        [isWidthFull]="true"
+        [images]="images"
+      ></app-swiper-example>
+    </div>
+    <div class="w-full h-full flex items-center flex-col pb-10">
+      <div class="w-[90%] sm:w-[80%] md:w-[70%] lg:w-[55%]">
+        <h1
+          class="text-[20px] sm:text-[30px] md:text-[35px] lg:text-[40px] text-center my-5 sm:my-10 font-normal"
+        >
+          Wykonujemy Prace Budowlane.
+        </h1>
+        <p class="text-sm sm:text-lg text-[#333] mb-4">
+          Robimy kompleksowe remonty mieszkan i domów w Warszawie i okolicach.
+        </p>
+        <ul
+          class="max-w-md space-y-1 text-gray-500 list-inside dark:text-gray-400"
+        >
+          <li *ngFor="let list of lists" class="flex items-center">
+            <svg
+              class="w-4 h-4 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <span class="text-[10px] sm:text-[16px]">{{ list }}</span>
+          </li>
+        </ul>
+        <p class="text-sm sm:text-lg text-[#333] mt-4">
+          Duzo innych rzeczy. Nie ma tego, czego my nie mozemy zrobic. Wyjazd do
+          klienta, wycena, zamówienia materiatów, wsparcia techniczne,
+          gwarancja, szybkie terminowe wykonanie projektu.
+        </p>
+      </div>
+    </div>
+  </div>
+</app-layout>

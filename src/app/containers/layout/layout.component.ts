@@ -11,7 +11,7 @@ export class LayoutComponent {
   public socialSite = [
     {
       image: '/assets/icons/instagram.png',
-      url: 'https://instagram.com/as_inter_bood?igshid=YmMyMTA2M2Y=',
+      url: 'https://instagram.com/prof_repairs?igshid=YmMyMTA2M2Y=',
     },
     {
       image: '/assets/icons/telegram.png',

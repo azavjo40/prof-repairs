@@ -27,7 +27,7 @@ export class LayoutComponent {
     },
     {
       image: '/assets/icons/telegram.png',
-      url: 'https://t.me/Abu_khalif',
+      url: 'https://t.me/Abu_khalif_2811',
     },
   ];
 }

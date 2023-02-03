@@ -25,5 +25,9 @@ export class LayoutComponent {
       image: '/assets/icons/instagram.png',
       url: 'https://instagram.com/warszawaremonty?igshid=YmMyMTA2M2Y=',
     },
+    {
+      image: '/assets/icons/telegram.png',
+      url: 'https://t.me/Abu_khalif',
+    },
   ];
 }

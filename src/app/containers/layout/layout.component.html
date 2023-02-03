@@ -12,7 +12,7 @@
     <div class="block lg:hidden">
       <button
         (click)="isOpenMenu = !isOpenMenu"
-        class="flex items-center px-3 py-2 border rounded text-black border-black"
+        class="flex items-center px-3 py-2 border rounded text-black border-black focus:outline-none"
       >
         <svg
           class="fill-current h-3 w-3"
@@ -27,7 +27,7 @@
     <div
       [ngClass]="{
         'hidden ': !isOpenMenu,
-        'block absolute top-20 left-0 z-50 pl-5': isOpenMenu
+        'block absolute top-20 left-0 z-50 pl-5 border-b-[0.5px] border-[#333]': isOpenMenu
       }"
       class="w-full block flex-grow lg:flex lg:items-center lg:w-auto bg-white"
     >
@@ -81,11 +81,12 @@
       </ul>
     </div>
     <hr class="my-6 border-white sm:mx-auto lg:my-8" />
-    <div class="flex items-center">
+    <div class="flex items-center flex-wrap">
     <span class="block text-sm text-white"
-      ><span class="sm:text-[18px] font-black mr-4">Prof Repairs</span>© {{ year }}
+      ><span class="sm:text-[18px] font-black mr-4">Prof Repairs</span>© {{ year }} One of the top teams in Poland 
     </span>
-          <a
+    <div class="flex">
+      <a
             *ngFor="let social of socialSite"
             [href]="social?.url"
             target="_blank"
@@ -93,6 +94,8 @@
           >
             <img class="w-8 h-8 cursor-pointer" [src]="social?.image" />
           </a>
+    </div>
+          
   </div>
   </footer>
 </div>

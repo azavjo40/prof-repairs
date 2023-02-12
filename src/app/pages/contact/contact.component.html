@@ -18,7 +18,7 @@
             formControlName="email"
           />
           <span class="text-red-500 text-xs" *ngIf="form.get('message')?.invalid && form.get('message')?.touched"
-            >This form is required...</span
+            >This field is required...</span
           >
         </div>
         <div class="sm:col-span-2">
@@ -32,7 +32,7 @@
             formControlName="message"
           ></textarea>
           <span class="text-red-500 text-xs" *ngIf="form.get('message')?.invalid && form.get('message')?.touched"
-            >This form is required...</span
+            >This field is required...</span
           >
         </div>
         <button

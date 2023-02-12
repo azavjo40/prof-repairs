@@ -1,21 +1,14 @@
 <app-layout>
   <section class="bg-white mb-a h-[80%]">
     <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
-      <h1
-        class="mb-4 text-xl text-center mt-10 font-extrabold text-gray-900  md:text-5xl lg:text-2xl"
-      >
-        <h1
-        class="text-[20px] sm:text-[30px] md:text-[35px] lg:text-[40px] text-center my-5 sm:my-10 font-bolt"
-          >Skontaktuj Się Z Nami</h1
-        >
+      <h1 class="mb-4 text-xl text-center mt-10 font-extrabold text-gray-900 md:text-5xl lg:text-2xl">
+        <h1 class="text-[20px] sm:text-[30px] md:text-[35px] lg:text-[40px] text-center my-5 sm:my-10 font-bolt">
+          Skontaktuj Się Z Nami
+        </h1>
       </h1>
       <form [formGroup]="form" class="space-y-8">
         <div>
-          <label
-            for="email"
-            class="block mb-2 text-sm font-medium text-gray-900 "
-            >Twój email</label
-          >
+          <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Twój email</label>
           <input
             type="email"
             id="email"
@@ -24,26 +17,28 @@
             required
             formControlName="email"
           />
+          <span class="text-red-500 text-xs" *ngIf="form.get('message')?.invalid && form.get('message')?.touched"
+            >This form is required...</span
+          >
         </div>
         <div class="sm:col-span-2">
-          <label
-            for="message"
-            class="block mb-2 text-sm font-medium text-gray-900 "
-            >Twoja wiadomość</label
-          >
+          <label for="message" class="block mb-2 text-sm font-medium text-gray-900">Twoja wiadomość</label>
           <textarea
             required
             id="message"
             rows="6"
-            class="block p-2.5 w-full resize-none text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 "
+            class="block p-2.5 w-full resize-none text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500"
             placeholder="Zostaw wiadomość..."
             formControlName="message"
           ></textarea>
+          <span class="text-red-500 text-xs" *ngIf="form.get('message')?.invalid && form.get('message')?.touched"
+            >This form is required...</span
+          >
         </div>
         <button
           (click)="sendMessage()"
           type="button"
-          class="text-white bg-gradient-to-r bg-[#008640]  hover:bg-gradient-to-br focus:ring-4 focus:outline-none hover:bg-[#1ead63]  font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+          class="text-white bg-gradient-to-r bg-[#008640] hover:bg-gradient-to-br focus:ring-4 focus:outline-none hover:bg-[#1ead63] font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
         >
           Wyślij wiadomość
         </button>
